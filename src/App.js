@@ -7,7 +7,7 @@ import SideBar from './components/SideBar';
 
 function App() {
   const [photo, setPhoto] = useState("random");
-  const [clientid, setClientid] = useState("JjVDJh0mroP0QcBIoK5VrrLQIuKOa3A1btr7tGoADc8");
+  const clientid = "JjVDJh0mroP0QcBIoK5VrrLQIuKOa3A1btr7tGoADc8";
   const [result, setResult] = useState([]);
   const [barlow, setBarlow] = useState();
   const [count, setCount] = useState(1);
