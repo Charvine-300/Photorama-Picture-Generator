@@ -14,6 +14,7 @@ function App() {
 
 
   function handleChange(event) {
+    event.preventDefault();
     setPhoto(event.target.value)
   }
 
