@@ -19,6 +19,12 @@ function App() {
 
   function handleSubmit(event) {
     console.log(photo);
+
+    axios.get("https://api.unsplash.com/search/photos?page=" + count + "&query=" + photo + "&per_page=15&client_id=" + clientid)
+    .then((response) => {
+      setResult(response.data.results);
+      setBarlow(response.data.total + " images found");
+    })
   }
 
   useEffect(() => {
@@ -26,7 +32,7 @@ function App() {
     .then((response) => {
       setResult(response.data.results);
       setBarlow(response.data.total + " images found");
-    })}, [count, photo]
+    })}, [count]
   );
   
 
