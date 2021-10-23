@@ -32,7 +32,7 @@ function App() {
     .then((response) => {
       setResult(response.data.results);
       setBarlow(response.data.total + " images found");
-    })}, [count]
+    })}, []
   );
   
 
