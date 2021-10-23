@@ -32,7 +32,6 @@ function App() {
     axios.get("https://api.unsplash.com/search/photos?page=" + count + "&query=" + photo + "&per_page=15&client_id=" + clientid)
     .then((response) => {
       setResult(response.data.results);
-      setBarlow(response.data.total + " images found");
     })}, [count, photo]
   );
   
