@@ -55,7 +55,9 @@ body {
   border-right: 1px solid hsl(0, 1%, 72%);
 }
 
-
+#evolution {
+  padding-top: 20px;
+}
 
 /*==========  Class Rules  ==========*/
 .placid-button {
@@ -76,7 +78,7 @@ body {
 
 .border-bottom {
   height: 100%;
-  margin-bottom: 5%;
+  margin-bottom: 40%;
   min-height: 100vh;
   border-color: transparent !important;
 }
@@ -146,12 +148,12 @@ input {
 }
 
 footer {
-  width: 90%;
+  width: 100%;
   height: fit-content;
-  margin-top: 30px;
   position: absolute;
   bottom: 0px;
-  padding: 20px;
+  padding: 10px 0px;
+  padding-bottom: 20px;
   border-top: 1px solid hsl(0, 1%, 72%);
 }
 
@@ -243,6 +245,10 @@ li:hover {
 @media only screen and (min-width: 1024px) {
   img {
     width: 95%;
+  }
+
+  .border-bottom {
+    margin-bottom: 10%;
   }
 
   .logo-housing {
