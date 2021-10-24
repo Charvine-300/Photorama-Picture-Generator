@@ -1,8 +1,6 @@
 import './components/App.css';
 import axios from 'axios';
-import ImageList from './components/imageList';
 import { useEffect, useState } from 'react';
-import SearchBar from './components/SearchBar';
 import SideBar from './components/SideBar';
 import Container from './components/Container';
 
@@ -20,12 +18,7 @@ function App() {
   }
 
   function handleSubmit(event) {
-    console.log(photo);
 
-    axios.get("https://api.unsplash.com/search/photos?page=" + count + "&query=" + photo + "&per_page=15&client_id=" + clientid)
-    .then((response) => {
-      setResult(response.data.results);
-    })
   }
 
   useEffect(() => {
