@@ -5,7 +5,7 @@ const SearchBar = ({side, bottom, barlow}) => {
         <div className="list-container">
             <div className="booker-t">
                 <button onClick={bottom} type="submit"> Search </button>
-                <input onChange={side} type="text" name="photo" placeholder="Find Something..." />
+                <input onBlur={side} type="text" name="photo" placeholder="Find Something..." />
             </div>
             <p>{barlow}</p>
         </div>

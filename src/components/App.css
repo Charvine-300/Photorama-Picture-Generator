@@ -2,6 +2,10 @@
   --o-headers-font-family: "Josefin Sans";
   --o-body-font-family: "Alata";
 }
+
+html {
+  height: 100%;
+}
  
 
 body {
@@ -14,6 +18,22 @@ body {
 
 
 /*==========  ID Rules  ==========*/
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+#container {
+  width: 65%;
+  height: 100%;
+  float: right;
+  clear: right;
+  min-height: 100%;
+  position: relative;
+}
+
+
+
 #photorama-logo {
   width: 50px;
   height: 50px;
@@ -26,14 +46,6 @@ body {
   padding: 12px;
 }
 
-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  margin: 2% auto;
-  display: block;
-}
-
 #side-bar {
   width: 35%;
   height: 100%;
@@ -43,31 +55,29 @@ img {
   border-right: 1px solid hsl(0, 1%, 72%);
 }
 
-#palcid-lake {
-  width: 60%;
-  height: fit-content;
-}
-
 
 
 /*==========  Class Rules  ==========*/
 .placid-button {
   margin: 0%;
-  float: right;
-  clear: right;
-  margin-left: 5%;
+  width: 30%;
+  margin-top: 20px;
+  display: inline-block;
+  margin-right: 5%;
+  margin-left: 10%;
 }
 
 .mace {
   margin: 0%;
-  clear: left;
-  margin-right: 5%;
-  float: left !important;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
 
 .border-bottom {
+  height: 100%;
   margin-bottom: 5%;
+  min-height: 100vh;
   border-color: transparent !important;
 }
 
@@ -99,11 +109,9 @@ img {
 }
 
 .list-container {
-  width: 65%;
-  float: right;
-  clear: right;
+  width: 100%;
+  height: 100%;
   padding: 3% 0%;
-  height: fit-content;
   border-bottom: 1px solid hsl(0, 1%, 72%);
 }
 
@@ -120,7 +128,13 @@ p {
   font-family: var(--o-body-font-family);
 }
 
-
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  margin: 2% auto;
+  display: block;
+}
 
 input {
   width: 80%;
@@ -129,7 +143,16 @@ input {
   padding: 15px 20px;
   border-radius: 5px;
   background-color: transparent;
+}
 
+footer {
+  width: 100%;
+  height: fit-content;
+  margin: auto;
+  margin-top: auto;
+  position: absolute;
+  bottom: 0px;
+  border-top: 1px solid hsl(0, 1%, 72%);
 }
 
 button {
@@ -204,6 +227,16 @@ li:hover {
     column-width: 33%;
     padding: 12px;
   }
+
+  .placid-button {
+    width: 20%;
+    margin-left: 40%;
+  }
+
+  .mace {
+    margin-left: 10%;
+    margin-right: 0%;
+  }
 }
 
 
@@ -225,9 +258,17 @@ li:hover {
     width: 20%;
   }
 
-  .list-container {
+  #container {
     width: 80%;
     padding: 0%;
+  }
+
+  .list-container {
+    padding: 0%;
+  }
+
+  .border-bottom {
+    padding: 3% 0%;
   }
 
   .booker-t button {
@@ -246,6 +287,16 @@ li:hover {
     margin-left: auto;
   }
 
+  
+  .placid-button {
+    width: 10%;
+    margin-left: 60%;
+  }
+
+  .mace {
+    margin-left: 10%;
+    margin-right: 0%;
+  }
 }
 
 

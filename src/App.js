@@ -4,6 +4,7 @@ import ImageList from './components/imageList';
 import { useEffect, useState } from 'react';
 import SearchBar from './components/SearchBar';
 import SideBar from './components/SideBar';
+import Container from './components/Container';
 
 function App() {
   const [photo, setPhoto] = useState("random");
@@ -11,10 +12,10 @@ function App() {
   const [result, setResult] = useState([]);
   const [barlow, setBarlow] = useState();
   const [count, setCount] = useState(1);
+  const [isPending, setIsPending] = useState(true);
 
 
   function handleChange(event) {
-    event.preventDefault();
     setPhoto(event.target.value)
   }
 
@@ -24,7 +25,6 @@ function App() {
     axios.get("https://api.unsplash.com/search/photos?page=" + count + "&query=" + photo + "&per_page=15&client_id=" + clientid)
     .then((response) => {
       setResult(response.data.results);
-      setBarlow(response.data.total + " images found");
     })
   }
 
@@ -32,6 +32,8 @@ function App() {
     axios.get("https://api.unsplash.com/search/photos?page=" + count + "&query=" + photo + "&per_page=15&client_id=" + clientid)
     .then((response) => {
       setResult(response.data.results);
+      setIsPending(false);
+      setBarlow(response.data.total + " images found");
     })}, [count, photo]
   );
   
@@ -40,8 +42,7 @@ function App() {
   return (
     <div className="App">
       <SideBar />
-      <SearchBar side={handleChange} bottom={handleSubmit} barlow={barlow}/>
-      <ImageList results={result}  count={count} setCount={setCount} />
+      <Container isPending={isPending} results={result} count={count} setCount={setCount} side={handleChange} bottom={handleSubmit} barlow={barlow} />
     </div>
 
     
