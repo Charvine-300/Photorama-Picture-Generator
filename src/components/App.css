@@ -78,7 +78,7 @@ body {
 
 .border-bottom {
   height: 100%;
-  margin-bottom: 40%;
+  margin-bottom: 70%;
   min-height: 100vh;
   border-color: transparent !important;
 }
@@ -238,6 +238,10 @@ li:hover {
   .mace {
     margin-left: 10%;
     margin-right: 0%;
+  }
+
+  .border-bottom {
+    margin-bottom: 40%;
   }
 }
 
