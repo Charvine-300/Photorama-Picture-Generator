@@ -246,7 +246,7 @@ li:hover {
 }
 
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1040px) {
   img {
     width: 95%;
   }
